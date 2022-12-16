@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+		<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+		<link rel="stylesheet"  href="styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+		<div class="conteiner">
+			<div class="row align-items-center vh-100 mx-auto">
+				<div class="col">
+					<div class="row panel mx-auto" style="margin-bottom: 10%;">
+
+						<label for="delay_range" class="form-label">Delay</label>
+						<input type="range" class="form-range" id="delay_range" style="margin-bottom: 3%;" min="0" max="1" value="0" step="0.001">
+
+						<label for="delay_range" class="form-label">Method</label>
+
+						<div class="btn-group" role="group" aria-label="Actions" style="margin-top: 5%;">
+
+							<button type="button" class="btn btn-success" id="start_button">
+								<i class="fa-solid fa-play"></i> Start
+							</button>
+
+							<button type="button" class="btn btn-danger" id="stop_button" disabled>
+								<i class="fa-solid fa-stop"></i> Stop
+							</button>
+
+							<button type="button" class="btn btn-secondary" id="clear_button">
+								<i class="fa-solid fa-rectangle-xmark"></i> Clear
+							</button>
+
+						</div>
+					</div>
+
+					<div class="row panel mx-auto" style="margin-bottom: 10%;">
+						<label for="delay_range" class="form-label">Length: <a id="length_text"></a></label>
+					</div>
+
+					<div class="row panel mx-auto" style="margin-bottom: 10%; float: bottom">
+						<button type="button" class="btn btn-primary" style="margin-bottom: 5%" id="history_button">
+							<i class="fa-solid fa-clock-rotate-left"></i>History
+						</button>
+						<button type="button" class="btn btn-danger" id="logout_button">
+							<i class="fa-solid fa-right-from-bracket"></i>Log out
+						</button>
+					</div>
+
+				</div>
+				<div class="col-9 " id="parent_points_canvas" style="height: 98%;">
+					<canvas class="rounded-5" style="background-color: lightgrey; width: 100%" id="canvas"></canvas>
+				</div>
+			</div>
+		</div>
+		<script src="../services/canvas.js" type="module"></script>
+		<script src="../services/backend.js" type="module"></script>
+		<script src="../scripts/index.js" type="module"></script>
+    </body>
+</html>

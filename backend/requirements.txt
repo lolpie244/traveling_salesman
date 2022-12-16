@@ -1,0 +1,11 @@
+psycopg2-binary
+python-environ
+django
+djangorestframework
+django-environ
+fastapi
+uvicorn
+djangorestframework-simplejwt
+django-cors-headers
+redis
+django-background-tasks
